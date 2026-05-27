@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import TabBar from './TabBar';
 import StatusBar from './StatusBar';
 import FileContent from './FileContent';
+import { personal } from '../data/portfolio';
 
 export type FileEntry = {
   name: string;
@@ -125,7 +126,7 @@ export default function IDE() {
           <span />
         </div>
         <div className="ide-breadcrumb">
-          ~/marta/portfolio/
+          ~/{personal.name.toLowerCase()}/portfolio/
           <span className="filename">{activeFile}</span>
         </div>
         <div className="ide-toolbar">

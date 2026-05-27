@@ -461,7 +461,7 @@ body {
 }
 .work-list li {
   display: grid;
-  grid-template-columns: 130px 1fr 150px;
+  grid-template-columns: 130px 1fr 240px;
   align-items: center;
   padding: 13px 4px;
   border-bottom: 1px solid var(--hi-low);
@@ -546,14 +546,18 @@ body {
   margin-top: 14px;
   display: inline-flex;
   align-items: center;
-  gap: 7px;
+  gap: 8px;
   font-family: var(--mono);
   font-size: 12.5px;
-  color: var(--iris);
-  text-decoration: none;
+  color: var(--subtle);
+  background: none;
+  border: 1px dashed var(--hi-med);
+  padding: 7px 14px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
 }
-.see-all:hover { color: var(--foam); }
+.see-all:hover { color: var(--foam); border-color: var(--foam); }
 
 /* ─── Content: Now panels ────────────────────────────── */
 

@@ -1,3 +1,5 @@
+import { personal } from '../../data/portfolio';
+
 type Props = { file: string };
 
 export default function PlaceholderPage({ file }: Props) {
@@ -9,7 +11,7 @@ export default function PlaceholderPage({ file }: Props) {
       </p>
       <p style={{ marginTop: '12px', color: 'var(--muted)' }}>
         {'Check back soon, or '}
-        <a href="mailto:marta@martacodes.it" style={{ color: 'var(--foam)', textDecoration: 'none' }}>
+        <a href={`mailto:${personal.email}`} style={{ color: 'var(--foam)', textDecoration: 'none' }}>
           get in touch
         </a>
         {' if you needed this urgently.'}
