@@ -53,7 +53,7 @@ body {
 
 .ide-window {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1536px;
   height: calc(100vh - 56px);
   min-height: 600px;
   background: var(--bg);

@@ -23,8 +23,8 @@ export const personal = {
 
 export const hero = {
   role: 'fullStackEngineer',
-  yearsExp: '8y',
-  yearsExpFull: '8 years',
+  yearsExp: '8 YoE',
+  yearsExpFull: '8+ years',
   currentCompany: 'Appetize.io',
   previousCompanies: ['Booking.com', 'BJSS', 'Resourcify'],
   tagline: 'At my best learning, experimenting, solving hard problems.',
