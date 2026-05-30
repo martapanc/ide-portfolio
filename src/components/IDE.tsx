@@ -3,6 +3,7 @@ import Sidebar from './Sidebar';
 import TabBar from './TabBar';
 import StatusBar from './StatusBar';
 import FileContent from './FileContent';
+import CommandPalette, { type PaletteAction } from './CommandPalette';
 import { personal } from '../data/portfolio';
 
 export type FileEntry = {
@@ -77,6 +78,8 @@ export default function IDE() {
     new Set(['featured']),
   );
   const [gutterLines, setGutterLines] = useState(20);
+  const [theme, setTheme] = useState<'dark' | 'light'>('dark');
+  const [paletteOpen, setPaletteOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -89,6 +92,29 @@ export default function IDE() {
     observer.observe(el);
     return () => observer.disconnect();
   }, [activeFile]);
+
+  useEffect(() => {
+    const saved = localStorage.getItem('theme') as 'dark' | 'light' | null;
+    if (saved) setTheme(saved);
+  }, []);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setPaletteOpen(o => !o);
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
+
+  const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
 
   const openFile = (name: string) => {
     setOpenTabs(prev => (prev.includes(name) ? prev : [...prev, name]));
@@ -106,6 +132,17 @@ export default function IDE() {
       return next;
     });
   };
+
+  const paletteActions: PaletteAction[] = [
+    { id: 'nav-index',   label: 'Open index.tsx',   icon: '⬡', category: 'navigate', onSelect: () => openFile('index.tsx') },
+    { id: 'nav-about',   label: 'Open about.md',    icon: '◈', category: 'navigate', onSelect: () => openFile('about.md') },
+    { id: 'nav-cv',      label: 'Open cv.tsx',       icon: '⬡', category: 'navigate', onSelect: () => openFile('cv.tsx') },
+    { id: 'nav-uses',    label: 'Open uses.md',      icon: '◈', category: 'navigate', onSelect: () => openFile('uses.md') },
+    { id: 'nav-contact', label: 'Open contact.ts',   icon: '⬡', category: 'navigate', onSelect: () => openFile('contact.ts') },
+    { id: 'nav-now',     label: 'Open now.md',       icon: '◈', category: 'navigate', onSelect: () => openFile('now.md') },
+    { id: 'theme',       label: `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`, icon: '◐', category: 'theme',    onSelect: toggleTheme },
+    { id: 'email',       label: 'Copy email address', icon: '✉', category: 'contact', onSelect: () => navigator.clipboard.writeText(personal.email) },
+  ];
 
   const toggleFolder = (name: string) => {
     setExpandedFolders(prev => {
@@ -130,8 +167,8 @@ export default function IDE() {
           <span className="filename">{activeFile}</span>
         </div>
         <div className="ide-toolbar">
-          <span title="Command palette">⌘K</span>
-          <span title="Toggle theme">◐</span>
+          <span title="Command palette (⌘K)" onClick={() => setPaletteOpen(true)}>⌘K</span>
+          <span title="Toggle theme" onClick={toggleTheme}>◐</span>
         </div>
       </div>
 
@@ -168,6 +205,12 @@ export default function IDE() {
       </div>
 
       <StatusBar activeFile={activeFile} lang={fileToLang(activeFile)} />
+
+      <CommandPalette
+        open={paletteOpen}
+        onClose={() => setPaletteOpen(false)}
+        actions={paletteActions}
+      />
     </div>
   );
 }
