@@ -3,9 +3,10 @@
 
 export const personal = {
   name: 'Marta',
+  brandName: 'MartaCodes',
   email: 'info@martacodes.it',
   github: {
-    href: 'https://github.com/martapancaldi',
+    href: 'https://github.com/martapanc',
     label: 'github.com/martapanc',
   },
   linkedin: {
@@ -17,6 +18,14 @@ export const personal = {
   timezone: 'EU / UK time zones',
   availability: 'open to freelance',
   languagesCodes: 'it · en · de',
+  socials: [
+    { label: 'github',    href: 'https://github.com/martapanc' },
+    { label: 'linkedin',  href: 'https://linkedin.com/in/martapancaldi' },
+    { label: 'medium',    href: 'https://medium.com/@marta.panc' },
+    { label: 'instagram', href: 'https://instagram.com/pancakemarta' },
+    { label: 'goodreads', href: 'https://www.goodreads.com/user/show/64587022-marta-p' },
+    { label: 'links',     href: null as string | null },
+  ],
 };
 
 // ─── Hero ─────────────────────────────────────────────────────────────────────

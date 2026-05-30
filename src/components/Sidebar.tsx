@@ -1,4 +1,5 @@
 import type { FileTree, FileEntry } from './IDE';
+import { personal } from '../data/portfolio';
 
 type Props = {
   tree: FileTree[];
@@ -89,7 +90,7 @@ export default function Sidebar({
       <div className="ide-sidebar-scroll">
         <div className="ide-brand">
           <span className="sl">{'<'}</span>
-          <span className="name">MartaCodes</span>{' '}
+          <span className="name">{personal.brandName}</span>{' '}
           <span className="tag">/</span>
           <span className="sl">{'>'}</span>
         </div>
@@ -114,16 +115,17 @@ export default function Sidebar({
 
       <div className="ide-sidebar-bottom">
         <div className="label">// connect</div>
-        <div className="ide-socials">
-          <a href="https://github.com/martapancaldi" target="_blank" rel="noopener noreferrer">github</a>
-          <a href="https://linkedin.com/in/martapancaldi" target="_blank" rel="noopener noreferrer">linkedin</a>
-          <a href="https://medium.com/@marta" target="_blank" rel="noopener noreferrer">medium</a>
-        </div>
-        <div className="ide-socials">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">instagram</a>
-          <a href="https://goodreads.com" target="_blank" rel="noopener noreferrer">goodreads</a>
-          <a href="#" onClick={e => e.preventDefault()}>links</a>
-        </div>
+        {[personal.socials.slice(0, 3), personal.socials.slice(3)].map((row, i) => (
+          <div key={i} className="ide-socials">
+            {row.map(({ label, href }) =>
+              href ? (
+                <a key={label} href={href} target="_blank" rel="noopener noreferrer">{label}</a>
+              ) : (
+                <a key={label} href="#" onClick={e => e.preventDefault()}>{label}</a>
+              )
+            )}
+          </div>
+        ))}
       </div>
     </aside>
   );
