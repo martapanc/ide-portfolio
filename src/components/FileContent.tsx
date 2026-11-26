@@ -31,24 +31,20 @@ export default function FileContent({ file, onNavigate }: Props) {
         <ProjectPage
           title="Appetize.io 2.0"
           lang="TypeScript"
-          stack="AstroJS · Tailwind · Cloudinary"
+          stack="AstroJS · TypeScript"
           year="2025"
           tags={['work', 'case study']}
           github={null}
           live="https://appetize.io"
-          intro="Full marketing-site rebuild for a B2B audience. Led the move from a playful CMS-driven site to a faster, SEO-tight AstroJS build that could be maintained by the team without touching code."
+          intro="Marketing-site rebuild for a B2B audience, as part of a company-wide rebrand at Appetize. I led the technical implementation in AstroJS."
           sections={[
             {
               heading: 'The problem',
-              body: 'The original site was built on a CMS that had grown brittle over the years. Pages were slow, SEO was an afterthought, and every content change required a developer. The marketing team needed ownership.',
+              body: 'The previous design was visually appealing but too playful for a business-focused audience, and the company was going through a rebrand.',
             },
             {
               heading: 'What I built',
-              body: 'A full Astro 4 site with content collections for the blog and changelog. Tailwind CSS for styling, Cloudinary for asset management, and a custom build pipeline that generates og:images at build time. Lighthouse score went from ~60 to 97.',
-            },
-            {
-              heading: 'Key decisions',
-              body: 'Chose Astro over Next.js because the site is 95% static — no need for server components. Content collections gave the marketing team a typed, schema-validated editing experience without a CMS layer.',
+              body: 'The new appetize.io, rebuilt almost from scratch in AstroJS as a maintainable static site. Performance went from ~60% to 90%+, and accessibility, best practices and SEO from ~75% to 95–100% across core pages.',
             },
           ]}
         />
@@ -58,20 +54,20 @@ export default function FileContent({ file, onNavigate }: Props) {
         <ProjectPage
           title="FlexInvoice"
           lang="TypeScript"
-          stack="React · Puppeteer · Node.js"
+          stack="Next.js · React · Express · Docker"
           year="2025"
           tags={['freelance', 'tooling']}
-          github="https://github.com"
+          github={null}
           live={null}
-          intro="A small, JSON-driven invoice generator I built for my freelance company. PDF render via Puppeteer headless Chrome, with an automation pipeline to pull line items from a spreadsheet."
+          intro="An invoicing tool for my own company, TPTS. It generates styled PDF invoices from structured data via server-side rendering and headless Chrome."
           sections={[
             {
               heading: 'Why I built it',
-              body: 'Every invoice tool either costs money or generates PDFs that look like they were made in 2002. I wanted something that matched my brand, ran locally, and could be scripted.',
+              body: 'Basic Word templates were too simple, and I did not want a complete invoicing product. I wanted something that matched my needs and could be automated.',
             },
             {
               heading: 'How it works',
-              body: 'A JSON config defines the invoice structure. A React component renders it with pixel-perfect styling. Puppeteer captures it to PDF. A Node.js CLI ties it together: `flexinvoice generate --month=2025-04`.',
+              body: 'Two decoupled services: a stateless Next.js rendering API (Zod validation, server-side React, Tailwind CSS, A4 PDF output) and a React + Express client with a form-based GUI, YAML-driven data presets, schema validation, CSV export and Docker containerization.',
             },
           ]}
         />
@@ -81,20 +77,20 @@ export default function FileContent({ file, onNavigate }: Props) {
         <ProjectPage
           title="Advent of Code — 500 ★"
           lang="Kotlin"
-          stack="Kotlin · Spring · GitHub Actions"
+          stack="TypeScript · Kotlin · Java · Python"
           year="2015–2025"
           tags={['side', 'algorithms']}
-          github="https://github.com"
+          github="https://github.com/martapanc/Advent-Of-Code"
           live={null}
-          intro="All 500 stars across every AoC year since 2015. Built a side API that scaffolds each day, fetches puzzle input, and auto-updates the README with star counts."
+          intro="All 500 stars across every Advent of Code year since 2015. I also built a small API that sets up each day's class, downloads the input and updates the README with my star progress."
           sections={[
             {
               heading: 'The approach',
-              body: 'Each year lives in its own Gradle module. Solutions are in Kotlin, with occasional Haskell experiments for the pure-functional days. A GitHub Actions workflow runs all solutions nightly and posts runtimes to a gist.',
+              body: 'I finished the 2020 event and then went back to solve all the earlier years. Solutions are mainly in Kotlin, with TypeScript, Java and Python in places.',
             },
             {
-              heading: 'What I learned',
-              body: 'Dynamic programming, graph traversal, and the pain of floating-point in Kotlin. Also: that AoC day 25 is almost always trivial if you did the other 24 well.',
+              heading: 'What I got out of it',
+              body: 'A lot of progress with Kotlin, complex algorithms and problem solving in general.',
             },
           ]}
         />

@@ -25,7 +25,7 @@ export default function IndexPage({ onNavigate }: Props) {
 
         <pre className="docstring">
           <span className="quotes">"""</span>{'\n'}
-          {'Italian software engineer, currently at '}
+          {'Italian software engineer, freelancing through '}
           <span className="company">{hero.currentCompany}</span>{'.\n'}
           {`${hero.yearsExpFull} across `}
           {hero.previousCompanies.map((c, i) => (

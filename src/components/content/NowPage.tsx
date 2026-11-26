@@ -36,7 +36,7 @@ export default function NowPage() {
             ))}
           </ul>
         </div>
-        <div className="panel">
+        {now.reading.length > 0 && <div className="panel">
           <h4><span className="hash">#</span> reading</h4>
           <ul>
             {now.reading.map((book, i) => (
@@ -49,7 +49,7 @@ export default function NowPage() {
               </li>
             ))}
           </ul>
-        </div>
+        </div>}
       </div>
 
       <h2><span className="hash">##</span> Off-keyboard</h2>

@@ -29,7 +29,7 @@ export default function AboutPage() {
       <h2><span className="hash">##</span> Background</h2>
 
       <p>
-        {about.backgroundProse} Now I'm back in {personal.location}, fully remote, which suits me well.
+        {about.backgroundProse} Now I'm based in {personal.location} and work fully remotely.
       </p>
 
       <p>

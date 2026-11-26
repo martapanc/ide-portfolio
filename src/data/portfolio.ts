@@ -13,8 +13,8 @@ export const personal = {
     href: 'https://linkedin.com/in/martapancaldi',
     label: 'linkedin.com/in/martapancaldi',
   },
-  location: 'Italy',
-  locationFull: 'Italy, CET (UTC+1)',
+  location: 'Andorra',
+  locationFull: 'Andorra, CET (UTC+1)',
   timezone: 'EU / UK time zones',
   availability: 'open to freelance',
   languagesCodes: 'it · en · de',
@@ -34,18 +34,19 @@ export const hero = {
   role: 'fullStackEngineer',
   yearsExp: '8 YoE',
   yearsExpFull: '8+ years',
-  currentCompany: 'Appetize.io',
-  previousCompanies: ['Booking.com', 'BJSS', 'Resourcify'],
+  currentCompany: 'TPTS',
+  previousCompanies: ['Appetize.io', 'Resourcify', 'BJSS', 'Booking.com'],
   tagline: 'At my best learning, experimenting, solving hard problems.',
 };
 
 // ─── Work history ─────────────────────────────────────────────────────────────
 
 export const work = [
-  { period: '2024 – now',  company: 'Appetize.io',  role: 'Senior Full-Stack Engineer', stack: 'Next.js · React · Astro · MongoDB' },
-  { period: '2022 – 2024', company: 'Resourcify',   role: 'Full-Stack Engineer',        stack: 'Java · React · Node · MySQL' },
-  { period: '2020 – 2022', company: 'BJSS',          role: 'Software Engineer',          stack: 'PHP · Angular · Vue · AWS' },
-  { period: '2018 – 2020', company: 'Booking.com',  role: 'Graduate Engineer',          stack: 'Java · React · Kotlin · PHP' },
+  { period: '2025 – now',  company: 'TPTS',        role: 'Freelance Software Engineer', stack: 'Next.js · React · FastAPI · PostgreSQL' },
+  { period: '2024 – 2026', company: 'Appetize.io', role: 'Full-Stack Engineer',         stack: 'Next.js · AstroJS · Node.js · MongoDB' },
+  { period: '2022 – 2024', company: 'Resourcify',  role: 'Software Engineer',           stack: 'Java · Spring Boot · Angular' },
+  { period: '2020 – 2022', company: 'BJSS',        role: 'Software Engineer',           stack: 'Drupal · PHP · Docker' },
+  { period: '2018 – 2020', company: 'Booking.com', role: 'Graduate Engineer',           stack: 'Java · Spring · React' },
 ];
 
 // ─── Featured projects ────────────────────────────────────────────────────────
@@ -69,27 +70,27 @@ export const featuredProjects: Project[] = [
     year: '2025',
     title: 'Appetize.io 2.0',
     deco: null,
-    desc: 'Full marketing-site rebuild for a B2B audience. Led the move from a playful CMS-driven site to a faster, SEO-tight AstroJS build.',
+    desc: 'Marketing-site rebuild for a B2B audience, as part of a company-wide rebrand. Led the technical implementation in AstroJS.',
     tags: ['work', 'case study'],
   },
   {
     file: 'advent-of-code.mdx',
     lang: 'Kotlin',
-    stack: 'Spring · CI',
+    stack: 'TypeScript · Java · Python',
     year: '2015–25',
     title: 'Advent of Code',
     deco: '500★',
-    desc: 'All 500 stars across every AoC year since 2015. Built a side API that scaffolds each day and auto-updates the README.',
+    desc: 'All 500 stars across every AoC year since 2015. Built a side API that sets up each day and auto-updates the README.',
     tags: ['side', 'algorithms'],
   },
   {
     file: 'flexinvoice.mdx',
     lang: 'TypeScript',
-    stack: 'React · Puppeteer',
+    stack: 'Next.js · React · Express',
     year: '2025',
     title: 'FlexInvoice',
     deco: null,
-    desc: 'A small, JSON-driven invoice generator for my freelance company. PDF render via Puppeteer, automation pipeline in progress.',
+    desc: 'An invoicing tool for my freelance company: structured data in, styled A4 PDF invoices out via server-side rendering and headless Chrome.',
     tags: ['freelance', 'tooling'],
   },
 ];
@@ -99,18 +100,18 @@ export const totalProjects = 20;
 // ─── About page ───────────────────────────────────────────────────────────────
 
 export const about = {
-  introProse: "I write mostly TypeScript, occasionally Kotlin when Java needs to be less verbose, and I've been known to write a Perl script without apologising.",
-  currentRoleDesc: 'where I work on the marketing site, internal tooling, and whatever else needs a careful pair of hands.',
-  previousRolesLine: "Before that: Resourcify (climate-tech), BJSS (consulting), Booking.com (don't think this needs presentation).",
+  introProse: 'My core stack is TypeScript and Java: React, Next.js and AstroJS on the frontend, Spring Boot and Node.js on the backend.',
+  currentRoleDesc: 'my own company, building custom software for small businesses and freelancers.',
+  previousRolesLine: 'Before that: Appetize.io (SaaS), Resourcify (waste-management SaaS), BJSS (consulting, Specsavers e-commerce), Booking.com / Rentalcars.com (graduate programme).',
   blockquote: 'At my best when the problem is ambiguous, the deadline is real, and the team trusts each other.',
   howIWork: [
-    "I'm thorough without being slow. I write tests, read documentation, and leave code in better shape than I found it. I prefer small, well-named functions over clever one-liners. I think the README matters.",
-    "I've worked in teams of 2 and teams of 200. I've been the only frontend engineer and the person untangling a decade of technical debt. I adapt.",
+    "I care about reliability, usability and maintainability, and I prefer clear design and pragmatic solutions. I write tests, read documentation, and do a lot of code review and pairing.",
+    "I've worked fully remotely and asynchronously across time zones since March 2020, including a couple of years on US time zones from Europe.",
   ],
-  backgroundProse: 'I grew up in Italy, studied Computer Science, moved to Amsterdam for Booking.com, then to London for a few years.',
+  backgroundProse: 'I grew up in Italy and studied Computer Science at the Free University of Bolzano, with an exchange semester at the College of Charleston (USA). I then did an MSc at the University of Manchester and started my career at Booking.com in the UK, where I lived for several years.',
   languagesSpoken: ['Italian', 'English', 'German'],
-  languagesNote: 'the last one fluently enough to work in it, not fluently enough to enjoy it.',
-  outsideCode: "I play oboe and alto in an amateur choir. I write short fiction (slowly). I read a lot — mostly literary fiction, occasionally non-fiction that makes me reconsider something. I take photos when I travel, which is often enough.",
+  languagesNote: 'native, C2 and B2 respectively, plus a little French, Spanish and Catalan.',
+  outsideCode: 'I have a diploma in oboe, and I like music enough to have written a tool to rescue my 12,000-track library from Plex.',
   site: {
     builtWith: ['Astro', 'React'],
     theme: 'Rose Pine Moon',
@@ -123,37 +124,33 @@ export const about = {
 export const now = {
   lastUpdated: '2026-05-12',
   intro: "A snapshot of what I'm currently doing, thinking about, and working on.",
-  workDesc: "Currently deep in a redesign of the customer-facing analytics dashboard — lots of React 19, some server components experiments, more charts than I'd like.",
-  freelanceLine: 'Taking on occasional freelance projects on the side (web, tooling, architecture consulting).',
+  workDesc: 'Currently building custom software through my own company, TPTS: FlexInvoice, FlexTag (a QR-labelled asset register) and a few personal projects such as Postilla.',
+  freelanceLine: 'Open to freelance projects (web, tooling).',
   offKeyboard: [
-    "Playing oboe and alto in a local amateur choir — we're rehearsing Brahms right now, which is exactly as humbling as it sounds.",
-    'Writing short fiction at roughly 1,200 words a week. Currently working on a story set in a near-future Milan. Going slowly and enjoying it.',
-    'Processing a photo backlog from Tokyo and Lisbon. Both trips were worth every euro.',
+    'Practising the oboe.',
+    'Tinkering with side projects like Postilla, a from-scratch rewrite of the Waline comment system.',
   ],
+
   footNote: "This page is inspired by Derek Sivers' /now movement. If you have one, I'd love to read it.",
   learning: [
-    { done: true,  text: 'LLM basics, RAG pipelines, eval frameworks' },
-    { done: false, text: 'Figma automation & plugin development' },
+    { done: true,  text: 'AI-assisted development workflows' },
     { done: false, text: 'Swift + SwiftUI for iOS' },
-    { done: false, text: 'Svelte 5 runes model' },
-    { done: false, text: 'Rust (very slowly)' },
+    { done: false, text: 'Postilla roadmap (9 of 11 milestones done)' },
   ],
+
   learningPreview: [
-    { done: true,  text: 'LLM, RAG & eval pipelines' },
-    { done: false, text: 'Figma automation & plugin dev' },
+    { done: true,  text: 'AI-assisted development workflows' },
     { done: false, text: 'Swift for iOS' },
-    { done: false, text: 'Svelte 5' },
+    { done: false, text: 'Postilla (9 of 11 milestones)' },
   ],
-  reading: [
-    { title: 'We Should All Be Feminists', author: 'Chimamanda Ngozi Adichie' },
-    { title: 'Staff Engineer', author: 'Will Larson', note: 'reference' },
-  ],
+
+  reading: [] as { title: string; author: string; note?: string }[],
+
   offKeyboardPreview: [
-    { icon: '📖', text: 'Reading: We Should All Be Feminists – C.N. Adichie' },
-    { icon: '🎶', text: 'Practising oboe + alto for the choir' },
-    { icon: '✍🏻', text: 'Drafting short fiction · ~1.2k words / wk' },
-    { icon: '📷', text: 'Travel photo backlog from Tokyo & Lisbon' },
+    { icon: '🎶', text: 'Practising the oboe' },
+    { icon: '🛠', text: 'Side projects: Postilla, FlexTag' },
   ],
+
   elsewhere: [
     { label: 'Medium',    href: 'https://medium.com',      note: 'mostly technical deep-dives' },
     { label: 'Instagram', href: 'https://instagram.com',   note: 'photos' },
@@ -179,50 +176,76 @@ export const contactPage = {
 
 export const experience = [
   {
-    title: 'Senior Full-Stack Engineer',
-    company: 'Appetize.io',
-    period: '2024 – present',
-    desc: 'Rebuilt the company marketing site in Astro 4, reducing Lighthouse score gap from ~60 to 97. Introduced content collections for the blog and changelog, giving marketing full ownership. Also maintain internal tooling and the customer-facing dashboard (Next.js).',
-    stack: ['AstroJS', 'Next.js', 'TypeScript', 'MongoDB', 'Cloudinary', 'GitHub Actions'],
+    title: 'Freelance Software Engineer',
+    company: 'TPTS (Taylor Pancaldi Technology Services)',
+    period: 'Oct 2025 – present',
+    desc: 'Custom software for small businesses and freelancers. Built FlexInvoice, which generates styled PDF invoices from structured data via server-side rendering and headless Chrome, and FlexTag, a multi-tenant asset register with QR-coded labels printed on a Brother label printer.',
+    stack: ['Next.js', 'React', 'Express', 'FastAPI', 'PostgreSQL', 'Docker'],
   },
   {
-    title: 'Full-Stack Engineer',
+    title: 'Full-Stack Software Engineer',
+    company: 'Appetize.io',
+    period: 'Jan 2024 – Feb 2026',
+    desc: 'Led the technical implementation of the new marketing website in AstroJS (performance from ~60% to 90%+, accessibility, best practices and SEO from ~75% to 95–100%). Worked on the V2 web application in Next.js, the Stripe billing integration, self-serve enterprise SSO (SAML and OIDC), and Google and GitHub authentication. Raised E2E test coverage from 50% to 90%+.',
+    stack: ['AstroJS', 'Next.js', 'Node.js', 'TypeScript', 'MongoDB', 'Stripe'],
+  },
+  {
+    title: 'Software Engineer',
     company: 'Resourcify',
-    period: '2021 – 2024',
-    desc: 'Built and owned the supplier management module from scratch — from database schema to UI. Introduced E2E tests with Playwright, reducing regression bugs by ~40% quarter-on-quarter. Mentored two junior engineers through their first production deployments.',
-    stack: ['React', 'Node.js', 'PostgreSQL', 'TypeScript', 'Playwright', 'AWS'],
+    period: 'Mar 2022 – Jan 2024',
+    desc: 'Joined the Recycler API team. Built a production accounting platform used daily by the operations team, replacing spreadsheet workflows. Diagnosed scaling bottlenecks in backend services and asynchronous data pipelines. One of the senior developers: code reviews, mentoring and onboarding.',
+    stack: ['Java', 'Spring Boot', 'Angular'],
   },
   {
     title: 'Software Engineer',
     company: 'BJSS',
-    period: '2019 – 2021',
-    desc: 'Delivered across three client engagements: a UK Government digital service (Java/Spring), a retail analytics dashboard (Angular/D3), and a logistics API (Kotlin). Passed SC clearance.',
-    stack: ['Java', 'Spring Boot', 'Angular', 'Kotlin', 'AWS', 'Docker'],
+    period: 'Nov 2020 – Mar 2022',
+    desc: "Worked on Specsavers' e-commerce platforms. Maintained a large Drupal-based web application, architected a GDPR-compliant cookie consent system across 9 production domains behind a feature flag, and helped containerize the application.",
+    stack: ['Drupal', 'PHP', 'Docker'],
   },
   {
-    title: 'Graduate Engineer',
-    company: 'Booking.com',
-    period: '2018 – 2019',
-    desc: 'Rotated through the Accommodation, Payments, and Mobile Platform teams. Shipped a Perl backend feature that landed in the A/B test that improved checkout conversion by 1.2%. Survived the Perl.',
-    stack: ['Perl', 'React', 'Kotlin', 'MySQL', 'Jenkins'],
+    title: 'Graduate Software Engineer',
+    company: 'Booking.com / Rentalcars.com',
+    period: 'Sep 2018 – Nov 2020',
+    desc: 'Rotation-based graduate programme. Migrated legacy systems to Spring-based APIs, worked on payments, sanctions screening and insurance products, and built React UI components and search filters during a web replatforming.',
+    stack: ['Java', 'Spring', 'React'],
+  },
+  {
+    title: 'Research Assistant',
+    company: 'Free University of Bolzano',
+    period: 'Sep 2017 – Apr 2018',
+    desc: 'Co-authored a peer-reviewed IEEE research article on cloud service contracts and policies, analysing the implications of GDPR.',
+    stack: [],
   },
 ];
 
 export const education = [
   {
+    title: 'MSc Advanced Computer Science (Software Engineering & Data Science)',
+    institution: 'The University of Manchester (UK)',
+    period: '2018',
+    desc: 'Graduated with distinction.',
+  },
+  {
     title: 'BSc Computer Science',
-    institution: 'University of Bologna',
-    period: '2015 – 2018',
-    desc: 'Focus on algorithms, distributed systems, and programming languages. Thesis on static analysis of concurrent programs.',
+    institution: 'Free University of Bolzano (Italy)',
+    period: '2017',
+    desc: 'Grade: 106 / 110.',
+  },
+  {
+    title: 'BSc Computer Science (exchange semester)',
+    institution: 'College of Charleston (USA)',
+    period: '2015',
+    desc: 'GPA: 4.0.',
   },
 ];
 
 export const skills: Record<string, string[]> = {
-  Languages:  ['TypeScript', 'Kotlin', 'Java', 'Python', 'Perl (recovering)'],
-  Frontend:   ['React', 'AstroJS', 'Next.js', 'Angular', 'Svelte (learning)'],
-  Backend:    ['Node.js', 'Spring Boot', 'Express', 'Fastify'],
-  Databases:  ['PostgreSQL', 'MongoDB', 'MySQL', 'Redis'],
-  Tooling:    ['Docker', 'GitHub Actions', 'AWS', 'Playwright', 'Vitest'],
+  'Frontend & UX':  ['React', 'Angular', 'Next.js', 'AstroJS', 'TypeScript', 'Tailwind CSS', 'Storybook', 'Figma'],
+  'Backend & APIs': ['Java (Spring Boot)', 'Node.js', 'Express', 'Python', 'PHP', 'REST', 'Stripe'],
+  Databases:        ['Postgres', 'MySQL', 'MongoDB'],
+  'Cloud & DevOps': ['AWS', 'Docker', 'Kubernetes', 'GitHub Actions', 'GitLab CI', 'Jenkins'],
+  Practices:        ['TDD', 'DDD', 'Code review', 'Pair programming'],
 };
 
 // ─── Uses ─────────────────────────────────────────────────────────────────────
@@ -242,28 +265,28 @@ export const uses = [
     category: 'languages + runtimes',
     items: [
       { name: 'TypeScript', desc: 'primary language' },
-      { name: 'Kotlin',     desc: 'Advent of Code, JVM projects' },
+      { name: 'Kotlin',     desc: 'Advent of Code' },
+      { name: 'Java',       desc: 'Spring Boot' },
       { name: 'Node.js',    desc: 'runtime of choice' },
-      { name: 'Python',     desc: 'scripting, ML experiments' },
+      { name: 'Python',     desc: 'scripting, FastAPI' },
     ],
   },
   {
     category: 'frontend',
     items: [
       { name: 'AstroJS',      desc: 'static sites, portfolios' },
-      { name: 'React 19',     desc: 'SPAs, dashboards' },
-      { name: 'Next.js 15',   desc: 'SSR, full-stack' },
+      { name: 'React',        desc: 'SPAs, dashboards' },
+      { name: 'Next.js',      desc: 'SSR, full-stack' },
       { name: 'Tailwind CSS', desc: 'styling utility-first' },
     ],
   },
   {
     category: 'tooling + infra',
     items: [
-      { name: 'Vitest',          desc: 'unit tests' },
       { name: 'Playwright',      desc: 'E2E tests' },
       { name: 'GitHub Actions',  desc: 'CI/CD' },
       { name: 'Docker',          desc: 'containerisation' },
-      { name: 'AWS',             desc: 'S3, Lambda, CloudFront' },
+      { name: 'AWS',             desc: 'cloud' },
     ],
   },
   {
